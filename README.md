@@ -1,50 +1,25 @@
-# React + TypeScript + Vite
+# Product Catalog React App
+## Project Description:
+This project is a Product Catalog built with React. It provides a user-friendly interface for browsing categories of products such as mobile phones, tablets, and accessories. Users can navigate through categories, view detailed product descriptions, and filter items based on their preferences. The project includes theme toggling, error handling, and features for adding and removing products from favorites and the shopping cart, with real-time price calculation.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technologies Used:
+- React with React Router - for building the user interface and managing component-based architecture.
+- TypeScript - for static typing, improving code reliability and maintainability.
+- SCSS - Modular styles with mixins and variables
+- HTML – Semantic and accessible markup
+- Context API
+- Hooks
 
-Currently, two official plugins are available:
+## Links:
+You can view the website here: [DEMO](https://irynamariiko00.github.io/react_phone-catalog/)<br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Design mockup:<br> 
+   - [Original](https://www.figma.com/design/T5ttF21UnT6RRmCQQaZc6L/Phone-catalog-(V2)-Original)<br>
+   - [Original Dark](https://www.figma.com/design/BUusqCIMAWALqfBahnyIiH/Phone-catalog-(V2)-Original-Dark)
 
-## Expanding the ESLint configuration
+## Additional Instructions for Running the Project:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Install dependencies by running the following command in the terminal: `npm install` <br>
+2. To open the project in a browser, use the following command in the terminal: `npm run dev`
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react';
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-});
-```
+Alternatively, you can open the HTML file directly in a browser.
