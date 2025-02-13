@@ -1,21 +1,25 @@
-import React from 'react';
 import './App.scss';
+import { Header } from './components/Header';
+import { Outlet } from 'react-router-dom';
+import { Menu } from './components/Menu';
+import { MenuProvider } from './hooks/useMenu';
+import { Footer } from './components/Footer';
+import { useErrorHandling } from './hooks/errorHandling';
+import { Error } from './components/Error';
 
-interface Props {
-  onClick: () => void;
-  children: React.ReactNode;
-}
+export const App = () => {
+  const { isError } = useErrorHandling();
 
-export const Provider: React.FC<Props> = React.memo(({ onClick, children }) => (
-  <button type="button" onClick={onClick}>
-    {children}
-  </button>
-));
-
-export const App: React.FC = () => {
   return (
-    <div className="starter">
-      <Provider onClick={() => ({})}>TodoList</Provider>
+    <div className="app">
+      <MenuProvider>
+        <div className="app__header">
+          <Header />
+        </div>
+        <Menu />
+      </MenuProvider>
+      <div className="app__main">{isError ? <Error /> : <Outlet />}</div>
+      <Footer />
     </div>
   );
 };
